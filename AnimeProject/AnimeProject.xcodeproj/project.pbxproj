@@ -13,6 +13,14 @@
 		593139AA270BE62D00C5C88E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 593139A8270BE62D00C5C88E /* Main.storyboard */; };
 		593139AC270BE62F00C5C88E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 593139AB270BE62F00C5C88E /* Assets.xcassets */; };
 		593139AF270BE62F00C5C88E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 593139AD270BE62F00C5C88E /* LaunchScreen.storyboard */; };
+		59767559270C0FB600A0AC8F /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5976754F270C0FB600A0AC8F /* UIViewController+Extension.swift */; };
+		5976755F270C0FB600A0AC8F /* ItemsTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59767558270C0FB600A0AC8F /* ItemsTabBar.swift */; };
+		5976757E270C1B3D00A0AC8F /* HomeProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59767577270C1B3D00A0AC8F /* HomeProtocols.swift */; };
+		5976757F270C1B3D00A0AC8F /* HomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59767578270C1B3D00A0AC8F /* HomeInteractor.swift */; };
+		59767580270C1B3D00A0AC8F /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5976757A270C1B3D00A0AC8F /* HomeViewController.swift */; };
+		59767581270C1B3D00A0AC8F /* HomeView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5976757B270C1B3D00A0AC8F /* HomeView.storyboard */; };
+		59767582270C1B3D00A0AC8F /* HomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5976757C270C1B3D00A0AC8F /* HomeRouter.swift */; };
+		59767583270C1B3D00A0AC8F /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5976757D270C1B3D00A0AC8F /* HomePresenter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +32,14 @@
 		593139AB270BE62F00C5C88E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		593139AE270BE62F00C5C88E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		593139B0270BE62F00C5C88E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5976754F270C0FB600A0AC8F /* UIViewController+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
+		59767558270C0FB600A0AC8F /* ItemsTabBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemsTabBar.swift; sourceTree = "<group>"; };
+		59767577270C1B3D00A0AC8F /* HomeProtocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeProtocols.swift; sourceTree = "<group>"; };
+		59767578270C1B3D00A0AC8F /* HomeInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeInteractor.swift; sourceTree = "<group>"; };
+		5976757A270C1B3D00A0AC8F /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		5976757B270C1B3D00A0AC8F /* HomeView.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = HomeView.storyboard; sourceTree = "<group>"; };
+		5976757C270C1B3D00A0AC8F /* HomeRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeRouter.swift; sourceTree = "<group>"; };
+		5976757D270C1B3D00A0AC8F /* HomePresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +72,8 @@
 		593139A1270BE62D00C5C88E /* AnimeProject */ = {
 			isa = PBXGroup;
 			children = (
+				59767561270C10CD00A0AC8F /* Modules */,
+				5976754C270C0FB600A0AC8F /* Common */,
 				593139A2270BE62D00C5C88E /* AppDelegate.swift */,
 				593139A4270BE62D00C5C88E /* SceneDelegate.swift */,
 				593139A6270BE62D00C5C88E /* ViewController.swift */,
@@ -65,6 +83,69 @@
 				593139B0270BE62F00C5C88E /* Info.plist */,
 			);
 			path = AnimeProject;
+			sourceTree = "<group>";
+		};
+		5976754C270C0FB600A0AC8F /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				5976754D270C0FB600A0AC8F /* Appearance */,
+				5976754E270C0FB600A0AC8F /* Extension */,
+				59767557270C0FB600A0AC8F /* Enum */,
+			);
+			name = Common;
+			path = ../../../../../../Desktop/Common;
+			sourceTree = "<group>";
+		};
+		5976754D270C0FB600A0AC8F /* Appearance */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Appearance;
+			sourceTree = "<group>";
+		};
+		5976754E270C0FB600A0AC8F /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				5976754F270C0FB600A0AC8F /* UIViewController+Extension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		59767557270C0FB600A0AC8F /* Enum */ = {
+			isa = PBXGroup;
+			children = (
+				59767558270C0FB600A0AC8F /* ItemsTabBar.swift */,
+			);
+			path = Enum;
+			sourceTree = "<group>";
+		};
+		59767561270C10CD00A0AC8F /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				59767576270C1B1E00A0AC8F /* Home */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		59767576270C1B1E00A0AC8F /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				59767578270C1B3D00A0AC8F /* HomeInteractor.swift */,
+				5976757D270C1B3D00A0AC8F /* HomePresenter.swift */,
+				59767577270C1B3D00A0AC8F /* HomeProtocols.swift */,
+				5976757C270C1B3D00A0AC8F /* HomeRouter.swift */,
+				59767579270C1B3D00A0AC8F /* View */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		59767579270C1B3D00A0AC8F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5976757A270C1B3D00A0AC8F /* HomeViewController.swift */,
+				5976757B270C1B3D00A0AC8F /* HomeView.storyboard */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -127,6 +208,7 @@
 			files = (
 				593139AF270BE62F00C5C88E /* LaunchScreen.storyboard in Resources */,
 				593139AC270BE62F00C5C88E /* Assets.xcassets in Resources */,
+				59767581270C1B3D00A0AC8F /* HomeView.storyboard in Resources */,
 				593139AA270BE62D00C5C88E /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -138,8 +220,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5976755F270C0FB600A0AC8F /* ItemsTabBar.swift in Sources */,
+				59767583270C1B3D00A0AC8F /* HomePresenter.swift in Sources */,
+				5976757F270C1B3D00A0AC8F /* HomeInteractor.swift in Sources */,
+				59767559270C0FB600A0AC8F /* UIViewController+Extension.swift in Sources */,
+				5976757E270C1B3D00A0AC8F /* HomeProtocols.swift in Sources */,
 				593139A7270BE62D00C5C88E /* ViewController.swift in Sources */,
+				59767582270C1B3D00A0AC8F /* HomeRouter.swift in Sources */,
 				593139A3270BE62D00C5C88E /* AppDelegate.swift in Sources */,
+				59767580270C1B3D00A0AC8F /* HomeViewController.swift in Sources */,
 				593139A5270BE62D00C5C88E /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

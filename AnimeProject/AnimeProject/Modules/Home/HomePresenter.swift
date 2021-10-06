@@ -1,7 +1,7 @@
-//  Created by jsn with love for you.
+//  Created by CS.
 //
 //  HomePresenter.swift
-//  Kromasol
+//  AnimeProject
 //
 //  Created by Developer on 2021.
 //

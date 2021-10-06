@@ -17,11 +17,16 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         
         let vc = HomeRouter.createModule().entry
+        let initialNC = UINavigationController(rootViewController: vc ?? UIViewController())
         let window = UIWindow(windowScene: windowScene)
         
-        window.rootViewController = vc
+        window.rootViewController = initialNC
         window.makeKeyAndVisible()
         self.window = window
+        
+        if #available(iOS 13.0, *) {
+            self.window?.overrideUserInterfaceStyle = .light
+        }
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {

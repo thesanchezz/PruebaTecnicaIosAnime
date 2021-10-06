@@ -21,12 +21,17 @@ protocol HomeRouterProtocol {
 protocol HomeViewProtocol {
     var presenter: HomePresenterProtocol? { get set }
     
+    // PRESENTER -> VIEW
+    func update()
+    func update(with error: String)
 }
 
 // MARK: - Interactor Protocol
 protocol HomeInteractorProtocol {
     var presenter: HomePresenterProtocol? { get set }
     
+    // PRESENTER -> INTERACTOR
+    func getPopularAnime()
 }
 
 // MARK: - Presenter Protocol
@@ -35,4 +40,12 @@ protocol HomePresenterProtocol {
     var interactor: HomeInteractorProtocol? { get set }
     var view: HomeViewProtocol? { get set }
     
+    // VIEW -> PRESENTER
+    func loadPopularAnimeList()
+    func cellListId() -> [String]
+    func numberOfRowsInSection() -> Int
+    func cellProperties(index: Int) -> HomePropertiesCell?
+    
+    // INTERACTOR -> PRESENTER
+    func popularAnimeList(with result: Result<[PopularAnimeEntitie], Error>)
 }

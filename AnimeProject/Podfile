@@ -1,9 +1,12 @@
 source 'https://github.com/CocoaPods/Specs.git'
-platform :ios, '9.0'
+platform :ios, '12.0'
 inhibit_all_warnings!
 
 def shared_pods
-  pod 'FSPagerView', '0.8.3'
+  pod 'Alamofire', '~> 5.4'
+  pod 'ZVProgressHUD', '~> 2.0.0'
+  pod 'FSPagerView'
+  pod 'ObjectMapper'
 end
 
 target 'AnimeProject' do

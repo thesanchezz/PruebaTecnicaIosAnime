@@ -13,6 +13,20 @@
 		593139AA270BE62D00C5C88E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 593139A8270BE62D00C5C88E /* Main.storyboard */; };
 		593139AC270BE62F00C5C88E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 593139AB270BE62F00C5C88E /* Assets.xcassets */; };
 		593139AF270BE62F00C5C88E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 593139AD270BE62F00C5C88E /* LaunchScreen.storyboard */; };
+		594085F3270CB14B003C9F9A /* NavBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 594085F2270CB14B003C9F9A /* NavBar.swift */; };
+		594085F7270CBB50003C9F9A /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 594085F6270CBB50003C9F9A /* Network.swift */; };
+		594085FB270CDEFC003C9F9A /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 594085FA270CDEFC003C9F9A /* Router.swift */; };
+		594085FF270CE9A5003C9F9A /* PopularAnimeEntitie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 594085FE270CE9A5003C9F9A /* PopularAnimeEntitie.swift */; };
+		59408601270CEE92003C9F9A /* ResponsePopularAnimeEntitie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59408600270CEE92003C9F9A /* ResponsePopularAnimeEntitie.swift */; };
+		59408604270CEFD4003C9F9A /* AnimeRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59408603270CEFD4003C9F9A /* AnimeRepository.swift */; };
+		5940860C270D023F003C9F9A /* PopularityPagerViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5940860A270D023F003C9F9A /* PopularityPagerViewCell.swift */; };
+		5940860D270D023F003C9F9A /* PopularityPagerViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5940860B270D023F003C9F9A /* PopularityPagerViewCell.xib */; };
+		5940860F270D0329003C9F9A /* UITableViewCell+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5940860E270D0329003C9F9A /* UITableViewCell+Extension.swift */; };
+		59408611270D03AA003C9F9A /* HomePropertiesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59408610270D03AA003C9F9A /* HomePropertiesCell.swift */; };
+		59408613270D06D1003C9F9A /* UITableView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59408612270D06D1003C9F9A /* UITableView+Extension.swift */; };
+		59408615270D07BF003C9F9A /* CellEntitie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59408614270D07BF003C9F9A /* CellEntitie.swift */; };
+		59408619270D4AE7003C9F9A /* HomeAnimeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59408617270D4AE7003C9F9A /* HomeAnimeCell.swift */; };
+		5940861A270D4AE7003C9F9A /* HomeAnimeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 59408618270D4AE7003C9F9A /* HomeAnimeCell.xib */; };
 		59767559270C0FB600A0AC8F /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5976754F270C0FB600A0AC8F /* UIViewController+Extension.swift */; };
 		5976755F270C0FB600A0AC8F /* ItemsTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59767558270C0FB600A0AC8F /* ItemsTabBar.swift */; };
 		5976757E270C1B3D00A0AC8F /* HomeProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59767577270C1B3D00A0AC8F /* HomeProtocols.swift */; };
@@ -33,6 +47,20 @@
 		593139AB270BE62F00C5C88E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		593139AE270BE62F00C5C88E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		593139B0270BE62F00C5C88E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		594085F2270CB14B003C9F9A /* NavBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavBar.swift; sourceTree = "<group>"; };
+		594085F6270CBB50003C9F9A /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
+		594085FA270CDEFC003C9F9A /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		594085FE270CE9A5003C9F9A /* PopularAnimeEntitie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularAnimeEntitie.swift; sourceTree = "<group>"; };
+		59408600270CEE92003C9F9A /* ResponsePopularAnimeEntitie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponsePopularAnimeEntitie.swift; sourceTree = "<group>"; };
+		59408603270CEFD4003C9F9A /* AnimeRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimeRepository.swift; sourceTree = "<group>"; };
+		5940860A270D023F003C9F9A /* PopularityPagerViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularityPagerViewCell.swift; sourceTree = "<group>"; };
+		5940860B270D023F003C9F9A /* PopularityPagerViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PopularityPagerViewCell.xib; sourceTree = "<group>"; };
+		5940860E270D0329003C9F9A /* UITableViewCell+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+Extension.swift"; sourceTree = "<group>"; };
+		59408610270D03AA003C9F9A /* HomePropertiesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePropertiesCell.swift; sourceTree = "<group>"; };
+		59408612270D06D1003C9F9A /* UITableView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Extension.swift"; sourceTree = "<group>"; };
+		59408614270D07BF003C9F9A /* CellEntitie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellEntitie.swift; sourceTree = "<group>"; };
+		59408617270D4AE7003C9F9A /* HomeAnimeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeAnimeCell.swift; sourceTree = "<group>"; };
+		59408618270D4AE7003C9F9A /* HomeAnimeCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeAnimeCell.xib; sourceTree = "<group>"; };
 		5976754F270C0FB600A0AC8F /* UIViewController+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
 		59767558270C0FB600A0AC8F /* ItemsTabBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemsTabBar.swift; sourceTree = "<group>"; };
 		59767577270C1B3D00A0AC8F /* HomeProtocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeProtocols.swift; sourceTree = "<group>"; };
@@ -92,9 +120,82 @@
 			path = AnimeProject;
 			sourceTree = "<group>";
 		};
+		594085F1270CB13A003C9F9A /* NavBar */ = {
+			isa = PBXGroup;
+			children = (
+				594085F2270CB14B003C9F9A /* NavBar.swift */,
+			);
+			path = NavBar;
+			sourceTree = "<group>";
+		};
+		594085F4270CB225003C9F9A /* TableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				59408616270D4AC9003C9F9A /* HomeAnimeCell */,
+				59408609270D0224003C9F9A /* PopularityPagerCell */,
+			);
+			path = TableViewCell;
+			sourceTree = "<group>";
+		};
+		594085F5270CB8A4003C9F9A /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				59408602270CEFA5003C9F9A /* Repository */,
+				594085FC270CE1D7003C9F9A /* Api */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		594085FC270CE1D7003C9F9A /* Api */ = {
+			isa = PBXGroup;
+			children = (
+				594085F6270CBB50003C9F9A /* Network.swift */,
+				594085FA270CDEFC003C9F9A /* Router.swift */,
+			);
+			path = Api;
+			sourceTree = "<group>";
+		};
+		594085FD270CE535003C9F9A /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				594085FE270CE9A5003C9F9A /* PopularAnimeEntitie.swift */,
+				59408600270CEE92003C9F9A /* ResponsePopularAnimeEntitie.swift */,
+				59408614270D07BF003C9F9A /* CellEntitie.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		59408602270CEFA5003C9F9A /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				59408603270CEFD4003C9F9A /* AnimeRepository.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		59408609270D0224003C9F9A /* PopularityPagerCell */ = {
+			isa = PBXGroup;
+			children = (
+				5940860A270D023F003C9F9A /* PopularityPagerViewCell.swift */,
+				5940860B270D023F003C9F9A /* PopularityPagerViewCell.xib */,
+			);
+			path = PopularityPagerCell;
+			sourceTree = "<group>";
+		};
+		59408616270D4AC9003C9F9A /* HomeAnimeCell */ = {
+			isa = PBXGroup;
+			children = (
+				59408617270D4AE7003C9F9A /* HomeAnimeCell.swift */,
+				59408618270D4AE7003C9F9A /* HomeAnimeCell.xib */,
+			);
+			path = HomeAnimeCell;
+			sourceTree = "<group>";
+		};
 		5976754C270C0FB600A0AC8F /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				594085FD270CE535003C9F9A /* Entities */,
+				594085F5270CB8A4003C9F9A /* Network */,
 				5976754D270C0FB600A0AC8F /* Appearance */,
 				5976754E270C0FB600A0AC8F /* Extension */,
 				59767557270C0FB600A0AC8F /* Enum */,
@@ -106,6 +207,8 @@
 		5976754D270C0FB600A0AC8F /* Appearance */ = {
 			isa = PBXGroup;
 			children = (
+				594085F4270CB225003C9F9A /* TableViewCell */,
+				594085F1270CB13A003C9F9A /* NavBar */,
 			);
 			path = Appearance;
 			sourceTree = "<group>";
@@ -114,6 +217,8 @@
 			isa = PBXGroup;
 			children = (
 				5976754F270C0FB600A0AC8F /* UIViewController+Extension.swift */,
+				5940860E270D0329003C9F9A /* UITableViewCell+Extension.swift */,
+				59408612270D06D1003C9F9A /* UITableView+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -122,6 +227,7 @@
 			isa = PBXGroup;
 			children = (
 				59767558270C0FB600A0AC8F /* ItemsTabBar.swift */,
+				59408610270D03AA003C9F9A /* HomePropertiesCell.swift */,
 			);
 			path = Enum;
 			sourceTree = "<group>";
@@ -161,7 +267,6 @@
 				BBBE052511C0671448B7BED4 /* Pods-AnimeProject.debug.xcconfig */,
 				E0ED7D398EEE65EB338667A1 /* Pods-AnimeProject.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -234,7 +339,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				593139AF270BE62F00C5C88E /* LaunchScreen.storyboard in Resources */,
+				5940860D270D023F003C9F9A /* PopularityPagerViewCell.xib in Resources */,
 				593139AC270BE62F00C5C88E /* Assets.xcassets in Resources */,
+				5940861A270D4AE7003C9F9A /* HomeAnimeCell.xib in Resources */,
 				59767581270C1B3D00A0AC8F /* HomeView.storyboard in Resources */,
 				593139AA270BE62D00C5C88E /* Main.storyboard in Resources */,
 			);
@@ -291,14 +398,26 @@
 			files = (
 				5976755F270C0FB600A0AC8F /* ItemsTabBar.swift in Sources */,
 				59767583270C1B3D00A0AC8F /* HomePresenter.swift in Sources */,
+				5940860C270D023F003C9F9A /* PopularityPagerViewCell.swift in Sources */,
+				59408601270CEE92003C9F9A /* ResponsePopularAnimeEntitie.swift in Sources */,
+				594085F7270CBB50003C9F9A /* Network.swift in Sources */,
+				59408619270D4AE7003C9F9A /* HomeAnimeCell.swift in Sources */,
 				5976757F270C1B3D00A0AC8F /* HomeInteractor.swift in Sources */,
 				59767559270C0FB600A0AC8F /* UIViewController+Extension.swift in Sources */,
+				59408613270D06D1003C9F9A /* UITableView+Extension.swift in Sources */,
 				5976757E270C1B3D00A0AC8F /* HomeProtocols.swift in Sources */,
+				59408615270D07BF003C9F9A /* CellEntitie.swift in Sources */,
 				593139A7270BE62D00C5C88E /* ViewController.swift in Sources */,
+				59408611270D03AA003C9F9A /* HomePropertiesCell.swift in Sources */,
 				59767582270C1B3D00A0AC8F /* HomeRouter.swift in Sources */,
+				594085F3270CB14B003C9F9A /* NavBar.swift in Sources */,
+				59408604270CEFD4003C9F9A /* AnimeRepository.swift in Sources */,
+				594085FB270CDEFC003C9F9A /* Router.swift in Sources */,
+				5940860F270D0329003C9F9A /* UITableViewCell+Extension.swift in Sources */,
 				593139A3270BE62D00C5C88E /* AppDelegate.swift in Sources */,
 				59767580270C1B3D00A0AC8F /* HomeViewController.swift in Sources */,
 				593139A5270BE62D00C5C88E /* SceneDelegate.swift in Sources */,
+				594085FF270CE9A5003C9F9A /* PopularAnimeEntitie.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

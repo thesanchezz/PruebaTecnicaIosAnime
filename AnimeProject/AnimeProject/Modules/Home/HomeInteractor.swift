@@ -11,5 +11,11 @@ import Foundation
 class HomeInteractor: HomeInteractorProtocol {
     var presenter: HomePresenterProtocol?
     
+    func getPopularAnime() {
+        AnimeRepository.shared.getPopularityList { result in
+            self.presenter?.popularAnimeList(with: result)
+        }
+    }
+    
 }
 

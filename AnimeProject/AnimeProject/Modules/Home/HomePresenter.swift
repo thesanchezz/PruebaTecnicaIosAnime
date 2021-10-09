@@ -19,7 +19,17 @@ class HomePresenter {
     
     private func prepareData() {
         var tableData: [CellEntitie] = []
+        tableData.append((CellEntitie(JSON: [
+            "id": HomePropertiesCell.titleSection.rawValue,
+            "data": ["name": "Lo más popular", "color":"#DB0032"]
+        ])!))
         tableData.append((CellEntitie(JSON: ["id": HomePropertiesCell.pager.rawValue])!))
+        
+        tableData.append((CellEntitie(JSON: [
+            "id": HomePropertiesCell.titleSection.rawValue,
+            "data": ["name": "Otros", "color":"#662482"]
+        ])!))
+        
         tableData.append((CellEntitie(JSON: ["id": HomePropertiesCell.anime.rawValue])!))
         tableData.append((CellEntitie(JSON: ["id": HomePropertiesCell.anime.rawValue])!))
         
@@ -54,6 +64,12 @@ extension HomePresenter: HomePresenterProtocol {
         let cellidentifier = HomePropertiesCell.init(rawValue: tableDataContainer[index].id ?? "")
         
         return cellidentifier
+    }
+    
+    func dataOfRows(index: Int) -> Any? {
+        let item = tableDataContainer?[index]
+        
+        return item?.data
     }
     
     func popularAnimeList(with result: Result<[PopularAnimeEntitie], Error>) {

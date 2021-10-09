@@ -26,13 +26,7 @@
 		59408654270D4FBD003C9F9A /* UITableView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59408636270D4FBD003C9F9A /* UITableView+Extension.swift */; };
 		59408655270D4FBD003C9F9A /* NavBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59408639270D4FBD003C9F9A /* NavBar.swift */; };
 		59408656270D4FBD003C9F9A /* HomeAnimeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5940863E270D4FBD003C9F9A /* HomeAnimeCell.swift */; };
-		59408657270D4FBD003C9F9A /* DetaildInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5940863F270D4FBD003C9F9A /* DetaildInteractor.swift */; };
-		59408658270D4FBD003C9F9A /* DetaildPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59408640270D4FBD003C9F9A /* DetaildPresenter.swift */; };
-		59408659270D4FBD003C9F9A /* DetaildRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59408641270D4FBD003C9F9A /* DetaildRouter.swift */; };
 		5940865A270D4FBD003C9F9A /* HomeAnimeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 59408642270D4FBD003C9F9A /* HomeAnimeCell.xib */; };
-		5940865B270D4FBD003C9F9A /* DetaildProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59408643270D4FBD003C9F9A /* DetaildProtocols.swift */; };
-		5940865C270D4FBD003C9F9A /* DetaildView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 59408645270D4FBD003C9F9A /* DetaildView.storyboard */; };
-		5940865D270D4FBD003C9F9A /* DetaildViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59408646270D4FBD003C9F9A /* DetaildViewController.swift */; };
 		5940865E270D4FBD003C9F9A /* PopularityPagerViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 59408648270D4FBD003C9F9A /* PopularityPagerViewCell.xib */; };
 		5940865F270D4FBD003C9F9A /* PopularityPagerViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59408649270D4FBD003C9F9A /* PopularityPagerViewCell.swift */; };
 		59408667270D5013003C9F9A /* DetaildInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59408660270D5013003C9F9A /* DetaildInteractor.swift */; };
@@ -53,10 +47,15 @@
 		59767581270C1B3D00A0AC8F /* HomeView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5976757B270C1B3D00A0AC8F /* HomeView.storyboard */; };
 		59767582270C1B3D00A0AC8F /* HomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5976757C270C1B3D00A0AC8F /* HomeRouter.swift */; };
 		59767583270C1B3D00A0AC8F /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5976757D270C1B3D00A0AC8F /* HomePresenter.swift */; };
-		8C422EF207A4E7EE1D4BD923 /* Pods_AnimeProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F95A848E17ED8F3A4A42BA2 /* Pods_AnimeProject.framework */; };
+		59DF9DC22712126E002F199A /* TitleSectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59DF9DC02712126E002F199A /* TitleSectionCell.swift */; };
+		59DF9DC32712126E002F199A /* TitleSectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 59DF9DC12712126E002F199A /* TitleSectionCell.xib */; };
+		59DF9DC527121610002F199A /* TitleSectionEntitie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59DF9DC427121610002F199A /* TitleSectionEntitie.swift */; };
+		59DF9DC7271216CA002F199A /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59DF9DC6271216CA002F199A /* UIColor+Extension.swift */; };
+		D97661A70C08E1870A9250D2 /* Pods_AnimeProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EB2B9AC4AEAD98B32AF8ECF /* Pods_AnimeProject.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3EB2B9AC4AEAD98B32AF8ECF /* Pods_AnimeProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AnimeProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5931399F270BE62D00C5C88E /* AnimeProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AnimeProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		593139A2270BE62D00C5C88E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		593139A4270BE62D00C5C88E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -105,9 +104,12 @@
 		5976757B270C1B3D00A0AC8F /* HomeView.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = HomeView.storyboard; sourceTree = "<group>"; };
 		5976757C270C1B3D00A0AC8F /* HomeRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeRouter.swift; sourceTree = "<group>"; };
 		5976757D270C1B3D00A0AC8F /* HomePresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
-		8F95A848E17ED8F3A4A42BA2 /* Pods_AnimeProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AnimeProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		BBBE052511C0671448B7BED4 /* Pods-AnimeProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AnimeProject.debug.xcconfig"; path = "Target Support Files/Pods-AnimeProject/Pods-AnimeProject.debug.xcconfig"; sourceTree = "<group>"; };
-		E0ED7D398EEE65EB338667A1 /* Pods-AnimeProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AnimeProject.release.xcconfig"; path = "Target Support Files/Pods-AnimeProject/Pods-AnimeProject.release.xcconfig"; sourceTree = "<group>"; };
+		59DF9DC02712126E002F199A /* TitleSectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleSectionCell.swift; sourceTree = "<group>"; };
+		59DF9DC12712126E002F199A /* TitleSectionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TitleSectionCell.xib; sourceTree = "<group>"; };
+		59DF9DC427121610002F199A /* TitleSectionEntitie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleSectionEntitie.swift; sourceTree = "<group>"; };
+		59DF9DC6271216CA002F199A /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
+		9BFC9645BE036ACC2437F67B /* Pods-AnimeProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AnimeProject.debug.xcconfig"; path = "Target Support Files/Pods-AnimeProject/Pods-AnimeProject.debug.xcconfig"; sourceTree = "<group>"; };
+		CCEA9B689B816FB5C0F67F9F /* Pods-AnimeProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AnimeProject.release.xcconfig"; path = "Target Support Files/Pods-AnimeProject/Pods-AnimeProject.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,7 +117,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8C422EF207A4E7EE1D4BD923 /* Pods_AnimeProject.framework in Frameworks */,
+				D97661A70C08E1870A9250D2 /* Pods_AnimeProject.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -128,7 +130,7 @@
 				593139A1270BE62D00C5C88E /* AnimeProject */,
 				593139A0270BE62D00C5C88E /* Products */,
 				C4A5673A1AFE5AA9B93F4738 /* Pods */,
-				DBAEC9B4923D4B18968AEBB7 /* Frameworks */,
+				D60430E79BCF6DA73C2E6F60 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -174,6 +176,7 @@
 				59408627270D4FBC003C9F9A /* PopularAnimeEntitie.swift */,
 				59408628270D4FBC003C9F9A /* CellEntitie.swift */,
 				59408629270D4FBC003C9F9A /* ResponsePopularAnimeEntitie.swift */,
+				59DF9DC427121610002F199A /* TitleSectionEntitie.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -219,6 +222,7 @@
 				59408634270D4FBD003C9F9A /* UIViewController+Extension.swift */,
 				59408635270D4FBD003C9F9A /* UITableViewCell+Extension.swift */,
 				59408636270D4FBD003C9F9A /* UITableView+Extension.swift */,
+				59DF9DC6271216CA002F199A /* UIColor+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -259,6 +263,7 @@
 		5940863C270D4FBD003C9F9A /* TableViewCell */ = {
 			isa = PBXGroup;
 			children = (
+				59DF9DBF27121256002F199A /* TitleSection */,
 				5940863D270D4FBD003C9F9A /* HomeAnimeCell */,
 				59408647270D4FBD003C9F9A /* PopularityPagerCell */,
 			);
@@ -371,19 +376,28 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		59DF9DBF27121256002F199A /* TitleSection */ = {
+			isa = PBXGroup;
+			children = (
+				59DF9DC02712126E002F199A /* TitleSectionCell.swift */,
+				59DF9DC12712126E002F199A /* TitleSectionCell.xib */,
+			);
+			path = TitleSection;
+			sourceTree = "<group>";
+		};
 		C4A5673A1AFE5AA9B93F4738 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				BBBE052511C0671448B7BED4 /* Pods-AnimeProject.debug.xcconfig */,
-				E0ED7D398EEE65EB338667A1 /* Pods-AnimeProject.release.xcconfig */,
+				9BFC9645BE036ACC2437F67B /* Pods-AnimeProject.debug.xcconfig */,
+				CCEA9B689B816FB5C0F67F9F /* Pods-AnimeProject.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
 		};
-		DBAEC9B4923D4B18968AEBB7 /* Frameworks */ = {
+		D60430E79BCF6DA73C2E6F60 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				8F95A848E17ED8F3A4A42BA2 /* Pods_AnimeProject.framework */,
+				3EB2B9AC4AEAD98B32AF8ECF /* Pods_AnimeProject.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -395,11 +409,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 593139B3270BE62F00C5C88E /* Build configuration list for PBXNativeTarget "AnimeProject" */;
 			buildPhases = (
-				3428775D5D46AAF1C0647BF5 /* [CP] Check Pods Manifest.lock */,
+				8FF4B4CAE1D528F6285201EB /* [CP] Check Pods Manifest.lock */,
 				5931399B270BE62D00C5C88E /* Sources */,
 				5931399C270BE62D00C5C88E /* Frameworks */,
 				5931399D270BE62D00C5C88E /* Resources */,
-				89D7CDFCB29C9C8F9CC84E11 /* [CP] Embed Pods Frameworks */,
+				DFFDBA4794455E146AD3E6E1 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -451,9 +465,9 @@
 				593139AF270BE62F00C5C88E /* LaunchScreen.storyboard in Resources */,
 				593139AC270BE62F00C5C88E /* Assets.xcassets in Resources */,
 				5940865A270D4FBD003C9F9A /* HomeAnimeCell.xib in Resources */,
-				5940865C270D4FBD003C9F9A /* DetaildView.storyboard in Resources */,
 				5940865E270D4FBD003C9F9A /* PopularityPagerViewCell.xib in Resources */,
 				59767581270C1B3D00A0AC8F /* HomeView.storyboard in Resources */,
+				59DF9DC32712126E002F199A /* TitleSectionCell.xib in Resources */,
 				593139AA270BE62D00C5C88E /* Main.storyboard in Resources */,
 				59408681270D5115003C9F9A /* SearchView.storyboard in Resources */,
 				5940866B270D5013003C9F9A /* DetaildView.storyboard in Resources */,
@@ -463,7 +477,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		3428775D5D46AAF1C0647BF5 /* [CP] Check Pods Manifest.lock */ = {
+		8FF4B4CAE1D528F6285201EB /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -485,7 +499,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		89D7CDFCB29C9C8F9CC84E11 /* [CP] Embed Pods Frameworks */ = {
+		DFFDBA4794455E146AD3E6E1 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -510,28 +524,27 @@
 			buildActionMask = 2147483647;
 			files = (
 				59767583270C1B3D00A0AC8F /* HomePresenter.swift in Sources */,
+				59DF9DC527121610002F199A /* TitleSectionEntitie.swift in Sources */,
 				59408684270D5115003C9F9A /* SearchInteractor.swift in Sources */,
 				5976757F270C1B3D00A0AC8F /* HomeInteractor.swift in Sources */,
-				59408658270D4FBD003C9F9A /* DetaildPresenter.swift in Sources */,
 				5940867F270D5115003C9F9A /* SearchProtocols.swift in Sources */,
 				59408654270D4FBD003C9F9A /* UITableView+Extension.swift in Sources */,
 				59408669270D5013003C9F9A /* DetaildPresenter.swift in Sources */,
 				5940864A270D4FBD003C9F9A /* PopularAnimeEntitie.swift in Sources */,
 				5976757E270C1B3D00A0AC8F /* HomeProtocols.swift in Sources */,
-				59408659270D4FBD003C9F9A /* DetaildRouter.swift in Sources */,
 				59408655270D4FBD003C9F9A /* NavBar.swift in Sources */,
 				59408652270D4FBD003C9F9A /* UIViewController+Extension.swift in Sources */,
 				593139A7270BE62D00C5C88E /* ViewController.swift in Sources */,
 				59408683270D5115003C9F9A /* SearchRouter.swift in Sources */,
 				59408650270D4FBD003C9F9A /* Network.swift in Sources */,
+				59DF9DC7271216CA002F199A /* UIColor+Extension.swift in Sources */,
 				5940866C270D5013003C9F9A /* DetaildViewController.swift in Sources */,
 				5940865F270D4FBD003C9F9A /* PopularityPagerViewCell.swift in Sources */,
 				59767582270C1B3D00A0AC8F /* HomeRouter.swift in Sources */,
 				5940864D270D4FBD003C9F9A /* ItemsTabBar.swift in Sources */,
 				59408651270D4FBD003C9F9A /* Router.swift in Sources */,
-				5940865D270D4FBD003C9F9A /* DetaildViewController.swift in Sources */,
-				5940865B270D4FBD003C9F9A /* DetaildProtocols.swift in Sources */,
 				59408680270D5115003C9F9A /* SearchViewController.swift in Sources */,
+				59DF9DC22712126E002F199A /* TitleSectionCell.swift in Sources */,
 				593139A3270BE62D00C5C88E /* AppDelegate.swift in Sources */,
 				5940864E270D4FBD003C9F9A /* HomePropertiesCell.swift in Sources */,
 				59767580270C1B3D00A0AC8F /* HomeViewController.swift in Sources */,
@@ -541,7 +554,6 @@
 				59408682270D5115003C9F9A /* SearchPresenter.swift in Sources */,
 				5940864C270D4FBD003C9F9A /* ResponsePopularAnimeEntitie.swift in Sources */,
 				59408668270D5013003C9F9A /* DetaildRouter.swift in Sources */,
-				59408657270D4FBD003C9F9A /* DetaildInteractor.swift in Sources */,
 				59408667270D5013003C9F9A /* DetaildInteractor.swift in Sources */,
 				5940864B270D4FBD003C9F9A /* CellEntitie.swift in Sources */,
 				5940864F270D4FBD003C9F9A /* AnimeRepository.swift in Sources */,
@@ -689,7 +701,7 @@
 		};
 		593139B4270BE62F00C5C88E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = BBBE052511C0671448B7BED4 /* Pods-AnimeProject.debug.xcconfig */;
+			baseConfigurationReference = 9BFC9645BE036ACC2437F67B /* Pods-AnimeProject.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -717,7 +729,7 @@
 		};
 		593139B5270BE62F00C5C88E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E0ED7D398EEE65EB338667A1 /* Pods-AnimeProject.release.xcconfig */;
+			baseConfigurationReference = CCEA9B689B816FB5C0F67F9F /* Pods-AnimeProject.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

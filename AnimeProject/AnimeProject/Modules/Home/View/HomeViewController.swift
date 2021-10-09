@@ -77,7 +77,13 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let propertiesCell: HomePropertiesCell = (presenter?.cellProperties(index: indexPath.row))!
+        let data = presenter?.dataOfRows(index: indexPath.row)
+        
         switch propertiesCell {
+        case .titleSection:
+            let cell = tableView.dequeueReusableCell(withIdentifier: propertiesCell.properties.idCell, for: indexPath) as! TitleSectionCell
+            cell.setUp(data: TitleSectionEntitie(JSON: data as! [String: Any])!)
+            return cell
         case .pager:
             let cell = tableView.dequeueReusableCell(withIdentifier: propertiesCell.properties.idCell, for: indexPath) as! PopularityPagerViewCell
             return cell
@@ -93,7 +99,7 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
         switch propertiesCell {
         case .pager:
             return view.frame.width - 100
-        case .anime:
+        case .anime, .titleSection:
             return propertiesCell.properties.height ?? 0
         }
     }

@@ -45,6 +45,7 @@ protocol HomePresenterProtocol {
     func cellListId() -> [String]
     func numberOfRowsInSection() -> Int
     func cellProperties(index: Int) -> HomePropertiesCell?
+    func dataOfRows(index: Int) -> Any?
     
     // INTERACTOR -> PRESENTER
     func popularAnimeList(with result: Result<[PopularAnimeEntitie], Error>)

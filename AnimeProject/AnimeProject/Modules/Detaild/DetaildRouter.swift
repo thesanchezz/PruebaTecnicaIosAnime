@@ -8,10 +8,10 @@
 
 import Foundation
 
-class DetaildRouter: DetaildRouterProtocol {
+class DetaildRouter {
     var entry: EntryPointDetaild?
     
-    static func createModule() -> DetaildRouterProtocol {
+    static func createModule(id: Int) -> DetaildRouterProtocol {
         let router = DetaildRouter()
         
         // MARK: Assign VIP
@@ -26,10 +26,16 @@ class DetaildRouter: DetaildRouterProtocol {
         presenter.interactor = interactor
         
         interactor.presenter = presenter
+        interactor.id = id
         
         router.entry = view as? EntryPointDetaild
         
         return router
     }
      
+}
+extension DetaildRouter: DetaildRouterProtocol {
+    func close() {
+        entry?.dismiss(animated: true, completion: nil)
+    }
 }

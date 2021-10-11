@@ -8,8 +8,16 @@
 
 import Foundation
 
-class DetaildInteractor: DetaildInteractorProtocol {
+class DetaildInteractor {
     var presenter: DetaildPresenterProtocol?
+    var id: Int?
     
 }
 
+extension DetaildInteractor: DetaildInteractorProtocol {
+    func getDetaild() {
+        AnimeRepository.shared.getDetaild(id: id ?? 0) { result in
+            self.presenter?.detaildAnime(with: result)
+        }
+    }
+}

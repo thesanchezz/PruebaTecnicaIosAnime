@@ -15,6 +15,9 @@ protocol HomeRouterProtocol {
     var entry: EntryPointHome? { get }
     
     static func createModule() -> HomeRouterProtocol
+    
+    //Presenter -> Router
+    func presentModule(to destination: UIViewController?)
 }
 
 // MARK: - View Protocol
@@ -32,6 +35,7 @@ protocol HomeInteractorProtocol {
     
     // PRESENTER -> INTERACTOR
     func getPopularAnime()
+    func getSeasonLater()
 }
 
 // MARK: - Presenter Protocol
@@ -45,8 +49,12 @@ protocol HomePresenterProtocol {
     func cellListId() -> [String]
     func numberOfRowsInSection() -> Int
     func cellProperties(index: Int) -> HomePropertiesCell?
+    func topAnime() -> [PopularAnimeEntitie]?
+    func seasonLater(index: Int) -> SeasonLaterAnimeEntitie?
     func dataOfRows(index: Int) -> Any?
+    func detaildAnime(id: Int)
     
     // INTERACTOR -> PRESENTER
     func popularAnimeList(with result: Result<[PopularAnimeEntitie], Error>)
+    func seasonLaterList(with result: Result<[SeasonLaterAnimeEntitie], Error>)
 }

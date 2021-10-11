@@ -7,8 +7,9 @@
 //
 
 import Foundation
+import UIKit
 
-class HomeRouter: HomeRouterProtocol {
+class HomeRouter {
     var entry: EntryPointHome?
     
     static func createModule() -> HomeRouterProtocol {
@@ -32,4 +33,14 @@ class HomeRouter: HomeRouterProtocol {
         return router
     }
      
+}
+extension HomeRouter: HomeRouterProtocol {
+    func presentModule(to destination: UIViewController?) {
+        guard let vc = destination else {
+            return
+        }
+        
+        let initController = UINavigationController(rootViewController: vc)
+        entry?.presenterFull(initController, animated: true, completion: nil)
+    }
 }

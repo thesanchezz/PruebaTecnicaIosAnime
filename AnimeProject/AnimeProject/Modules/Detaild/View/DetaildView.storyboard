@@ -1,27 +1,90 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_0" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Select Country View Controller-->
+        <!--Detaild View Controller-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController storyboardIdentifier="DetaildViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Y6W-OH-hqX" customClass="DetaildViewController" customModule="Kromasol" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DetaildViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Y6W-OH-hqX" customClass="DetaildViewController" customModule="AnimeProject" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0Gg-4g-L16">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="3ZK-BK-wFP">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="397.5"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ySJ-PQ-pec">
+                                                <rect key="frame" x="57.5" y="0.0" width="205" height="250"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="205" id="Eqx-le-72h"/>
+                                                    <constraint firstAttribute="height" constant="250" id="kOY-LL-Jhi"/>
+                                                </constraints>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Ou-kS-qb6">
+                                                <rect key="frame" x="20" y="265" width="280" height="26"/>
+                                                <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="20"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sinopsis:" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sfO-v4-h5g">
+                                                <rect key="frame" x="20" y="306" width="280" height="26"/>
+                                                <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="20"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Centuries ago, mankind was slaughtered to near extinction" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gwk-Gz-Jph">
+                                                <rect key="frame" x="20" y="347" width="280" height="50.5"/>
+                                                <fontDescription key="fontDescription" name="PingFangHK-Light" family="PingFang HK" pointSize="18"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="sfO-v4-h5g" secondAttribute="trailing" constant="20" id="G1d-UA-P7Q"/>
+                                            <constraint firstAttribute="trailing" secondItem="2Ou-kS-qb6" secondAttribute="trailing" constant="20" id="Tp6-SJ-gwi"/>
+                                            <constraint firstItem="2Ou-kS-qb6" firstAttribute="leading" secondItem="3ZK-BK-wFP" secondAttribute="leading" constant="20" id="a4y-Df-qu9"/>
+                                            <constraint firstAttribute="trailing" secondItem="Gwk-Gz-Jph" secondAttribute="trailing" constant="20" id="l65-nO-fcU"/>
+                                            <constraint firstItem="sfO-v4-h5g" firstAttribute="leading" secondItem="3ZK-BK-wFP" secondAttribute="leading" constant="20" id="tv0-zt-LuN"/>
+                                            <constraint firstItem="Gwk-Gz-Jph" firstAttribute="leading" secondItem="3ZK-BK-wFP" secondAttribute="leading" constant="20" id="yr0-kg-P93"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="3ZK-BK-wFP" firstAttribute="top" secondItem="0Gg-4g-L16" secondAttribute="top" id="2Ek-2V-WmW"/>
+                                    <constraint firstAttribute="bottom" secondItem="3ZK-BK-wFP" secondAttribute="bottom" id="UWb-NG-bbL"/>
+                                    <constraint firstAttribute="trailing" secondItem="3ZK-BK-wFP" secondAttribute="trailing" id="VnO-KH-aSQ"/>
+                                    <constraint firstItem="3ZK-BK-wFP" firstAttribute="width" secondItem="0Gg-4g-L16" secondAttribute="width" id="kUE-hC-ZG4"/>
+                                    <constraint firstItem="3ZK-BK-wFP" firstAttribute="leading" secondItem="0Gg-4g-L16" secondAttribute="leading" id="pR9-wi-ORZ"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="0Gg-4g-L16" firstAttribute="bottom" secondItem="vDu-zF-Fre" secondAttribute="bottom" id="7ie-Wa-Q0Y"/>
+                            <constraint firstItem="0Gg-4g-L16" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="ICM-5V-1pD"/>
+                            <constraint firstItem="0Gg-4g-L16" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="ZZd-62-bDW"/>
+                            <constraint firstItem="0Gg-4g-L16" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="kDS-lx-a6Z"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="imageAnime" destination="ySJ-PQ-pec" id="dNk-aD-AYR"/>
+                        <outlet property="nameAnime" destination="2Ou-kS-qb6" id="M0n-GB-Yuf"/>
+                        <outlet property="synopsis" destination="Gwk-Gz-Jph" id="d11-AE-xaX"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="83" y="119"/>
+            <point key="canvasLocation" x="82.5" y="118.30985915492958"/>
         </scene>
     </scenes>
     <resources>

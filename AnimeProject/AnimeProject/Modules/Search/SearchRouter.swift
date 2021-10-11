@@ -1,14 +1,15 @@
-//  Created by jsn with love for you.
+//  Created by CS.
 //
 //  SearchRouter.swift
-//  Kromasol
+//  AnimeProject
 //
 //  Created by Developer on 2021.
 //
 
 import Foundation
+import UIKit
 
-class SearchRouter: SearchRouterProtocol {
+class SearchRouter {
     var entry: EntryPointSearch?
     
     static func createModule() -> SearchRouterProtocol {
@@ -32,4 +33,14 @@ class SearchRouter: SearchRouterProtocol {
         return router
     }
      
+}
+extension SearchRouter: SearchRouterProtocol {
+    func presentModule(to destination: UIViewController?) {
+        guard let vc = destination else {
+            return
+        }
+        
+        let initController = UINavigationController(rootViewController: vc)
+        entry?.presenterFull(initController, animated: true, completion: nil)
+    }
 }

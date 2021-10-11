@@ -9,7 +9,7 @@
 import UIKit
 
 class HomeViewController: UIViewController {
-
+    
     // MARK: - IBOutlets
     @IBOutlet weak private var tableView: UITableView!
 
@@ -25,11 +25,10 @@ class HomeViewController: UIViewController {
     
     // MARK: - init view controller
     private func setup(){
-        showLoading()
+        setNavbar(type: .logoSearch)
         setUpTable()
         presenter?.loadPopularAnimeList()
         
-        setUpCustomNavBar()
     }
     
     private func setUpTable() {
@@ -39,32 +38,14 @@ class HomeViewController: UIViewController {
         
         tableView.setup(cells: presenter?.cellListId() ?? [])
     }
-    
-    func setUpCustomNavBar(){
-        let logo = UIImage(named: "anime-logo")
-        let imageView = UIImageView(image:logo)
-        imageView.contentMode = .scaleAspectFit
-        self.navigationItem.titleView = imageView
-        
-        let messageButton = UIButton(type: .system)
-        messageButton.setImage(UIImage(named: "search")?.withRenderingMode(.alwaysOriginal), for: .normal)
-        messageButton.frame = CGRect(x: 0, y: 0, width: 30, height: 30)
-        navigationItem.rightBarButtonItem = UIBarButtonItem(customView: messageButton)
-        
-        let rightBarButtonItem = UIBarButtonItem()
-        rightBarButtonItem.customView = messageButton
-        navigationItem.setRightBarButton(rightBarButtonItem, animated: false)
-    }
 
 }
 extension HomeViewController: HomeViewProtocol {
     func update() {
-        hideLoading()
         tableView.reloadData()
     }
     
     func update(with error: String) {
-        hideLoading()
         showAlert(alertMessage: error)
     }
 
@@ -82,13 +63,15 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
         switch propertiesCell {
         case .titleSection:
             let cell = tableView.dequeueReusableCell(withIdentifier: propertiesCell.properties.idCell, for: indexPath) as! TitleSectionCell
-            cell.setUp(data: TitleSectionEntitie(JSON: data as! [String: Any])!)
+            cell.setUp(data: TitleSectionEntitie(JSON: data as! [String: Any])!, loading: presenter?.topAnime() == nil ? true : false )
             return cell
-        case .pager:
-            let cell = tableView.dequeueReusableCell(withIdentifier: propertiesCell.properties.idCell, for: indexPath) as! PopularityPagerViewCell
+        case .slider:
+            let cell = tableView.dequeueReusableCell(withIdentifier: propertiesCell.properties.idCell, for: indexPath) as! PopularitySliderCell
+            cell.setUp(delegate: self, data: presenter?.topAnime())
             return cell
         case .anime:
-            let cell = tableView.dequeueReusableCell(withIdentifier: propertiesCell.properties.idCell, for: indexPath) as! HomeAnimeCell
+            let cell = tableView.dequeueReusableCell(withIdentifier: propertiesCell.properties.idCell, for: indexPath) as! ItemAnimeCell
+            cell.setUp(anime: presenter?.seasonLater(index: indexPath.row))
             return cell
         }
 
@@ -96,12 +79,20 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         let propertiesCell: HomePropertiesCell = (presenter?.cellProperties(index: indexPath.row))!
-        switch propertiesCell {
-        case .pager:
-            return view.frame.width - 100
-        case .anime, .titleSection:
-            return propertiesCell.properties.height ?? 0
-        }
+        
+        return propertiesCell.properties.height ?? 0
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let data = presenter?.seasonLater(index: indexPath.row)
+        
+        presenter?.detaildAnime(id: data?.mal_id ?? 0)
+    }
+    
+}
+
+extension HomeViewController: PopularitySliderDelegateCell {
+    func goToAnime(index: Int) {
+        presenter?.detaildAnime(id: index)
+    }
 }

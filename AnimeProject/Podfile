@@ -4,9 +4,10 @@ inhibit_all_warnings!
 
 def shared_pods
   pod 'Alamofire', '~> 5.4'
-  pod 'ZVProgressHUD', '~> 2.0.0'
-  pod 'FSPagerView'
   pod 'ObjectMapper'
+  pod 'SDWebImage', '~> 5.0'
+  pod 'SkeletonView', '1.4.2'
+  pod 'Actions', '3.0.1'
 end
 
 target 'AnimeProject' do

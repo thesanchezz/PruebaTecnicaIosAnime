@@ -9,8 +9,9 @@
 import Foundation
 
 class HomePresenter {
-    private var popularList: [PopularAnimeEntitie]?
     private var tableDataContainer: [CellEntitie]?
+    private var popularList: [PopularAnimeEntitie]?
+    private var seasonLaterList: [SeasonLaterAnimeEntitie]?
     
     //MARK: - protocolos
     var view: HomeViewProtocol?
@@ -23,25 +24,35 @@ class HomePresenter {
             "id": HomePropertiesCell.titleSection.rawValue,
             "data": ["name": "Lo más popular", "color":"#DB0032"]
         ])!))
-        tableData.append((CellEntitie(JSON: ["id": HomePropertiesCell.pager.rawValue])!))
+        tableData.append((CellEntitie(JSON: ["id": HomePropertiesCell.slider.rawValue])!))
         
         tableData.append((CellEntitie(JSON: [
             "id": HomePropertiesCell.titleSection.rawValue,
-            "data": ["name": "Otros", "color":"#662482"]
+            "data": ["name": "Próximas temporadas", "color":"#662482"]
         ])!))
         
-        tableData.append((CellEntitie(JSON: ["id": HomePropertiesCell.anime.rawValue])!))
-        tableData.append((CellEntitie(JSON: ["id": HomePropertiesCell.anime.rawValue])!))
+        if self.seasonLaterList != nil {
+            seasonLaterList?.enumerated().forEach({ (index, value) in
+                tableData.append((CellEntitie(JSON: ["id": HomePropertiesCell.anime.rawValue, "data": value.toJSON(), "indexExtra": index])!))
+            })
+        }else {
+            for _ in 0...4 {
+                tableData.append((CellEntitie(JSON: ["id": HomePropertiesCell.anime.rawValue])!))
+            }
+        }
         
         tableDataContainer = tableData
-        
         view?.update()
     }
 
 }
 extension HomePresenter: HomePresenterProtocol {
+    
     func loadPopularAnimeList() {
+        prepareData()
+        
         interactor?.getPopularAnime()
+        interactor?.getSeasonLater()
     }
     
     func cellListId() -> [String] {
@@ -62,7 +73,6 @@ extension HomePresenter: HomePresenterProtocol {
         }
         
         let cellidentifier = HomePropertiesCell.init(rawValue: tableDataContainer[index].id ?? "")
-        
         return cellidentifier
     }
     
@@ -72,10 +82,35 @@ extension HomePresenter: HomePresenterProtocol {
         return item?.data
     }
     
+    func detaildAnime(id: Int) {
+        let vc = DetaildRouter.createModule(id: id).entry
+        router?.presentModule(to: vc)
+    }
+    
+    func topAnime() -> [PopularAnimeEntitie]? {
+        return popularList
+    }
+    
+    func seasonLater(index: Int) -> SeasonLaterAnimeEntitie? {
+        let seasonLaterIndex = tableDataContainer?[index].indexExtra ?? 0
+        
+        return seasonLaterList?[seasonLaterIndex]
+    }
+    
     func popularAnimeList(with result: Result<[PopularAnimeEntitie], Error>) {
         switch result {
         case .success(let popularList):
             self.popularList = popularList
+            prepareData()
+        case .failure(let error):
+            view?.update(with: error.localizedDescription)
+        }
+    }
+    
+    func seasonLaterList(with result: Result<[SeasonLaterAnimeEntitie], Error>) {
+        switch result {
+        case .success(let seasonLaterList):
+            self.seasonLaterList = seasonLaterList
             prepareData()
         case .failure(let error):
             view?.update(with: error.localizedDescription)

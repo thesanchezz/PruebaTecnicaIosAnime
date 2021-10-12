@@ -10,6 +10,9 @@ import Alamofire
 
 enum Router: URLRequestConvertible {
     case popularity
+    case detaild(id: Int)
+    case seasonLater
+    case search(text: String)
     
     private var baseURL: String {
         return "https://api.jikan.moe/v3"
@@ -17,14 +20,14 @@ enum Router: URLRequestConvertible {
     
     var method: HTTPMethod {
         switch self {
-        case .popularity:
+        case .popularity, .detaild, .seasonLater, .search:
             return .get
         }
     }
     
     var parameters: [String : Any]? {
         switch self {
-        case .popularity:
+        case .popularity, .detaild, .seasonLater, .search:
             return nil
         }
     }
@@ -34,6 +37,17 @@ enum Router: URLRequestConvertible {
         case .popularity:
             let url = URL(string: "\(baseURL)/top/anime/1/bypopularity")!
             return url
+        case .detaild(let id):
+            let url = URL(string: "\(baseURL)/anime/\(id)")!
+            return url
+        case .seasonLater:
+            let url = URL(string: "\(baseURL)/season/later")!
+            return url
+        case .search(let text):
+            let url = "\(baseURL)/search/anime?q=\(text)&order_by=start_date"
+            let escapedString = url.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) ?? ""
+            let urlComplete = URL(string: escapedString)!
+            return urlComplete
         }
     }
     

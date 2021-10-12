@@ -6,7 +6,6 @@
 //
 
 import UIKit
-import ZVProgressHUD
 
 extension UIViewController {
     class func instantiate<T: UIViewController>(from storyboard: UIStoryboard, identifier: String) -> T {
@@ -33,13 +32,8 @@ extension UIViewController {
         return window
     }
     
-    func showLoading(){
-        ZVProgressHUD.maskType = .black
-        ZVProgressHUD.show()
-    }
-    
-    func hideLoading(){
-        ZVProgressHUD.dismiss()
+    func setNavbar(type: NavigationBarMode) {
+        NavBar.init(viewController: self).themeNavigationBar(mode: type)
     }
     
     func showAlert(alertText : String = "Error", alertMessage : String) {
@@ -47,4 +41,14 @@ extension UIViewController {
         alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
         self.present(alert, animated: true, completion: nil)
     }
+    
+    func presenterFull(_ viewControllerToPresent: UIViewController, animated flag: Bool, completion: (() -> Void)? = nil){
+        viewControllerToPresent.modalPresentationStyle = .fullScreen
+        viewControllerToPresent.providesPresentationContextTransitionStyle = true
+        viewControllerToPresent.definesPresentationContext = true
+        viewControllerToPresent.modalPresentationStyle = .overCurrentContext
+        
+        self.present(viewControllerToPresent, animated: flag, completion: completion)
+    }
+    
 }

@@ -9,7 +9,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="HomeAnimeCell" customModule="AnimeProject" customModuleProvider="target">
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="ItemAnimeCell" customModule="AnimeProject" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="320" height="120"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
@@ -22,14 +22,27 @@
                             <constraint firstAttribute="width" constant="80" id="ZIh-70-b5a"/>
                         </constraints>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OPG-KH-2g7">
-                        <rect key="frame" x="100" y="10" width="210" height="26"/>
-                        <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="20"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label Label Label Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OPG-KH-2g7">
+                        <rect key="frame" x="100" y="10" width="210" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="height" relation="lessThanOrEqual" constant="42" id="J8R-Va-l6Y"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="16"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vys-pY-8WP">
+                        <rect key="frame" x="100" y="41" width="210" height="0.0"/>
+                        <fontDescription key="fontDescription" name="KohinoorBangla-Light" family="Kohinoor Bangla" pointSize="14"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
                 <constraints>
+                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="vys-pY-8WP" secondAttribute="bottom" constant="10" id="5vZ-MU-Qcm"/>
+                    <constraint firstItem="vys-pY-8WP" firstAttribute="top" secondItem="OPG-KH-2g7" secondAttribute="bottom" constant="10" id="7XJ-7S-1Nl"/>
+                    <constraint firstAttribute="trailing" secondItem="vys-pY-8WP" secondAttribute="trailing" constant="10" id="Beq-zT-cHT"/>
+                    <constraint firstItem="vys-pY-8WP" firstAttribute="leading" secondItem="lbC-7m-wKv" secondAttribute="trailing" constant="10" id="HIJ-aR-okY"/>
                     <constraint firstItem="OPG-KH-2g7" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="PlY-KY-ZVG"/>
                     <constraint firstItem="OPG-KH-2g7" firstAttribute="leading" secondItem="lbC-7m-wKv" secondAttribute="trailing" constant="10" id="Q6D-qq-fn6"/>
                     <constraint firstItem="lbC-7m-wKv" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="QIB-qH-Sbw"/>
@@ -39,6 +52,11 @@
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="imagenProduc" destination="lbC-7m-wKv" id="wK4-Eb-o3r"/>
+                <outlet property="nameLbl" destination="OPG-KH-2g7" id="rn2-rB-BzV"/>
+                <outlet property="synopsis" destination="vys-pY-8WP" id="wIG-or-KAs"/>
+            </connections>
             <point key="canvasLocation" x="137.68115942028987" y="138.61607142857142"/>
         </tableViewCell>
     </objects>

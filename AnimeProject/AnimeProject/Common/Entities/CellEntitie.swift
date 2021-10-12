@@ -11,6 +11,7 @@ struct CellEntitie: Mappable {
     var id: String?
     var slug: String?
     var data: Any?
+    var indexExtra: Int?
     
     init?(map: Map) {}
     
@@ -18,5 +19,6 @@ struct CellEntitie: Mappable {
         id <- map["id"]
         slug <- map["slug"]
         data <- map["data"]
+        indexExtra <- map["indexExtra"]
     }
 }

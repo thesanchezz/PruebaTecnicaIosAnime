@@ -8,19 +8,22 @@
 import UIKit
 
 enum HomePropertiesCell: String {
-    case pager
+    case titleSection
+    case slider
     case anime
     
     typealias itemProperties = (idCell: String, height: CGFloat?)
     
     var properties: itemProperties {
         switch self {
-        case .pager:
-            return (idCell: PopularityPagerViewCell.identifier, height: PopularityPagerViewCell.height)
+        case .titleSection:
+            return (idCell: TitleSectionCell.identifier, height: TitleSectionCell.height)
+        case .slider:
+            return (idCell: PopularitySliderCell.identifier, height: PopularitySliderCell.height)
         case .anime:
-            return (idCell: HomeAnimeCell.identifier, height: HomeAnimeCell.height)
+            return (idCell: ItemAnimeCell.identifier, height: ItemAnimeCell.height)
         }
     }
     
-    static let allItems = [pager, anime]
+    static let allItems = [titleSection, slider, anime]
 }
